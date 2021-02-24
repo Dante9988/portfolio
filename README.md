@@ -1,4 +1,4 @@
-# # Clever Programming ReactJS Portfolio Template      
+# # Portfolio Template      
 
 ![ReactJS Resume Website Template](portfolio.png?raw=true "ReactJS Resume Website Template")
 
@@ -7,7 +7,7 @@
 ## Description
 This is a ReactJS based personal resume website template
 
-## Make it Your Own!
+## Make it Your Own, make available your resume on web!
 #### PREREQUISITES:
 - Sign up for a Netlify account <a href='https://www.netlify.com'>HERE</a>
 - Install Node JS in your computer <a href='https://nodejs.org/en/'>HERE</a>
