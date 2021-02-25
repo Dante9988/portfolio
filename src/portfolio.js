@@ -77,11 +77,11 @@ https://fontawesome.com/icons?d=gallery */
       fontAwesomeClassname: "fab fa-react"
     },
     {
-      skillName: "nodejs",
+      skillName: "Solidity",
       fontAwesomeClassname: "fab fa-node"
     },
     {
-      skillName: "swift",
+      skillName: "Java",
       fontAwesomeClassname: "fab fa-swift"
     },
     {
@@ -93,7 +93,7 @@ https://fontawesome.com/icons?d=gallery */
       fontAwesomeClassname: "fas fa-database"
     },
     {
-      skillName: "firebase",
+      skillName: "aws",
       fontAwesomeClassname: "fas fa-fire"
     }
   ],
