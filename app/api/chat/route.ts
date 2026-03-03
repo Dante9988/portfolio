@@ -1,8 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
 
-const FASTAPI_URL = process.env.FASTAPI_URL || "http://localhost:8000";
+export const dynamic = "force-dynamic";
 
 export async function POST(request: NextRequest) {
+  const FASTAPI_URL = process.env.FASTAPI_URL || "http://localhost:8000";
   const body = await request.json();
   const stream = body.stream ?? true;
 
