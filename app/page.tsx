@@ -2,6 +2,57 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Github, Linkedin, Mail, Sparkles } from "lucide-react";
 
+const SI = (slug: string) => `https://cdn.simpleicons.org/${slug}/38bdf8`;
+const DI = (path: string) => `https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${path}.svg`;
+
+const techStack = {
+  "Languages": [
+    { name: "Python", icon: DI("python/python-original") },
+    { name: "TypeScript", icon: DI("typescript/typescript-original") },
+    { name: "JavaScript", icon: DI("javascript/javascript-original") },
+    { name: "Rust", icon: DI("rust/rust-original") },
+    { name: "Solidity", icon: SI("solidity") },
+    { name: "C#", icon: DI("csharp/csharp-original") },
+    { name: "Java", icon: DI("java/java-original") },
+  ],
+  "AI / ML Infrastructure": [
+    { name: "OpenAI", icon: "/icons/openai.svg" },
+    { name: "Anthropic", icon: SI("anthropic") },
+    { name: "LangChain", icon: SI("langchain") },
+    { name: "RAG", icon: "/icons/rag.svg" },
+    { name: "Vector DB", icon: "/icons/vectordb.svg" },
+    { name: "Ollama", icon: SI("ollama") },
+    { name: "Hugging Face", icon: SI("huggingface") },
+    { name: "PyTorch", icon: DI("pytorch/pytorch-original") },
+  ],
+  "Backend & Databases": [
+    { name: "Node.js", icon: DI("nodejs/nodejs-original") },
+    { name: "NestJS", icon: DI("nestjs/nestjs-original") },
+    { name: "FastAPI", icon: DI("fastapi/fastapi-original") },
+    { name: ".NET", icon: DI("dotnetcore/dotnetcore-original") },
+    { name: "PostgreSQL", icon: DI("postgresql/postgresql-original") },
+    { name: "Redis", icon: DI("redis/redis-original") },
+  ],
+  "Blockchain": [
+    { name: "Ethereum", icon: SI("ethereum") },
+    { name: "Solana", icon: SI("solana") },
+    { name: "Hardhat", icon: DI("hardhat/hardhat-original") },
+  ],
+  "Frontend": [
+    { name: "React", icon: DI("react/react-original") },
+    { name: "Next.js", icon: DI("nextjs/nextjs-original") },
+    { name: "Tailwind", icon: DI("tailwindcss/tailwindcss-original") },
+  ],
+  "Infrastructure": [
+    { name: "Docker", icon: DI("docker/docker-original") },
+    { name: "Kubernetes", icon: DI("kubernetes/kubernetes-original") },
+    { name: "GitHub Actions", icon: DI("githubactions/githubactions-original") },
+    { name: "Linux", icon: DI("linux/linux-original") },
+    { name: "Git", icon: DI("git/git-original") },
+    { name: "Bash", icon: DI("bash/bash-original") },
+  ],
+};
+
 export default function HomePage() {
   return (
     <div className="max-w-5xl mx-auto px-6 py-20">
@@ -24,13 +75,15 @@ export default function HomePage() {
               </span>
               <br />
               <span className="text-3xl md:text-4xl text-slate-400 font-medium">
-                AI Systems Engineer &amp; Distributed Backend
+                AI &amp; Blockchain Systems Engineer
               </span>
             </h1>
 
             <p className="text-lg text-slate-400 max-w-2xl mb-10 leading-relaxed">
-              I build AI-powered platforms that turn blockchain data into intelligence — RAG systems,
-              LLM pipelines, vector databases, and multi-source signal processing on top of{" "}
+              I&apos;ve contributed to over{" "}
+              <span className="text-white font-semibold">1M+ lines of code</span> across
+              production AI systems and blockchain infrastructure — RAG pipelines,
+              LLM orchestration, smart contracts, and cross-chain workers on{" "}
               <span className="text-sky-400">Solana</span>,{" "}
               <span className="text-sky-400">Ethereum</span>, and{" "}
               <span className="text-sky-400">Substrate</span>.
@@ -88,9 +141,9 @@ export default function HomePage() {
       <section className="mb-24">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
-            { value: "10+", label: "Years Experience" },
             { value: "1M+", label: "Lines of Code" },
-            { value: "20+", label: "Production Systems" },
+            { value: "10+", label: "Years in Engineering" },
+            { value: "4+", label: "AI/LLM Systems Built" },
             { value: "8", label: "Companies" },
           ].map((stat) => (
             <div key={stat.label} className="card text-center">
@@ -101,22 +154,64 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Skills / Stack */}
+      {/* Tech Stack */}
       <section className="mb-24">
-        <h2 className="text-2xl font-semibold text-white mb-8">Core Stack</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <h2 className="text-2xl font-semibold text-white mb-8">Tech Stack</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {Object.entries(techStack).map(([category, items]) => (
+            <div key={category} className="card">
+              <h3 className="text-sky-400 font-semibold mb-5 text-sm uppercase tracking-wider">
+                {category}
+              </h3>
+              <div className="flex flex-wrap gap-3">
+                {items.map((tech) => (
+                  <div
+                    key={tech.name}
+                    className="flex flex-col items-center gap-1.5 w-16 group"
+                    title={tech.name}
+                  >
+                    <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-[#0f1117] border border-[#2a2d3a] group-hover:border-sky-500/40 transition-colors duration-200">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={tech.icon}
+                        alt={tech.name}
+                        width={24}
+                        height={24}
+                        className="w-6 h-6"
+                        loading="lazy"
+                      />
+                    </div>
+                    <span className="text-[10px] text-slate-500 text-center leading-tight group-hover:text-slate-300 transition-colors">
+                      {tech.name}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Core Expertise */}
+      <section className="mb-24">
+        <h2 className="text-2xl font-semibold text-white mb-8">Core Expertise</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {[
             {
-              area: "🧠 AI / RAG / LLM (Strongest)",
-              items: ["LangChain", "RAG Pipelines", "OpenAI API", "Claude", "Vector Databases", "Embeddings", "LLM Integration", "AI Agents", "Sentiment Analysis", "pgvector", "Tool Orchestration"],
+              area: "AI Engineering",
+              items: ["RAG Pipelines", "LLM Orchestration", "Vector Databases (pgvector)", "LangChain", "OpenAI API", "Anthropic API", "Embeddings", "Prompt Engineering", "Ollama / Meta Llama", "AI Agents", "Hugging Face"],
             },
             {
-              area: "⛓️ Blockchain & On-Chain",
-              items: ["EVM", "Solana", "Substrate", "Pump.fun SDK", "Jito MEV", "ethers.js / viem", "Solidity / Hardhat", "Foundry", "Anchor", "Polkadot.js"],
+              area: "Blockchain Engineering",
+              items: ["Solidity / Hardhat / Foundry", "EVM (ethers.js / viem)", "Solana / Pump.fun / Jito", "Substrate / Polkadot.js", "Smart Contracts", "Cross-Chain Bridges", "DeFi Infrastructure"],
             },
             {
-              area: "⚙️ Backend & Infrastructure",
-              items: ["Python", "TypeScript", "NestJS", "Node.js", "C# / .NET", "PostgreSQL", "Docker", "Azure DevOps", "GitHub Actions", "WebSocket", "REST / GraphQL"],
+              area: "Backend & Systems",
+              items: ["Python (FastAPI)", "TypeScript (NestJS)", "PostgreSQL", "Redis", "Docker", "Kubernetes", "C# / .NET", "WebSocket", "REST APIs", "Distributed Systems"],
+            },
+            {
+              area: "Reliability & Automation",
+              items: ["CI/CD Architecture", "Infrastructure Tooling", "System Validation", "Azure Pipelines", "GitHub Actions", "Developer Workflow Automation"],
             },
           ].map((group) => (
             <div key={group.area} className="card">
@@ -146,25 +241,25 @@ export default function HomePage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {[
             {
-              title: "🧠 OnlyPump – AI Crypto Analytics Platform",
-              desc: "AI-powered decision-support platform on Pump.fun/Solana. Multi-source intelligence (X sentiment, on-chain wallet analysis, market data) processed through RAG pipelines and LLM-powered scoring models.",
-              tags: ["AI", "RAG", "LangChain", "Solana", "Pump.fun"],
+              title: "OnlyPump – AI Investment Intelligence Platform",
+              desc: "AI-powered investment platform on Pump.fun/Solana that adapts to each user's risk profile. Multi-source intelligence, RAG pipelines, and scoring models statistically validated through backtesting with Sharpe ratio and Monte Carlo analysis.",
+              tags: ["AI", "RAG", "Backtesting", "Solana", "Pump.fun"],
               href: "/projects/onlypump",
             },
             {
-              title: "🔗 CCNext Cross-Chain Bridge Worker",
-              desc: "Production off-chain worker bridging Ethereum → CCNext L2 via proof API orchestration, exponential backoff retry, and per-wallet nonce management.",
-              tags: ["Cross-Chain", "NestJS", "ethers.js", "viem"],
-              href: "/projects/ccnext-bridge-worker",
-            },
-            {
-              title: "🤖 AI DevOps Workflow Bot",
-              desc: "Slack bot using hybrid regex + OpenAI NLU to execute Azure DevOps pipelines from natural language commands with stateful confirmation flows.",
-              tags: ["AI", "OpenAI", "NestJS", "Azure DevOps"],
+              title: "AI DevOps Workflow Bot",
+              desc: "RAG-augmented Slack bot with vector DB retrieval, multi-provider LLM support (OpenAI, Anthropic, Ollama), and Kubernetes pod management through structured natural language commands.",
+              tags: ["AI", "RAG", "LangChain", "Kubernetes", "Ollama"],
               href: "/projects/ai-devops-workflow",
             },
             {
-              title: "🛡️ TruChain – AI Content Verification on Blockchain",
+              title: "CodePilot AI – Interview Prep Platform",
+              desc: "Open-source AI coding platform with 100 problems, 9 languages, AI coaching modes, code execution via Judge0, and context-aware mentor chat.",
+              tags: ["AI", "Open Source", "Next.js", "FastAPI", "Judge0"],
+              href: "/projects/codepilot-ai",
+            },
+            {
+              title: "TruChain – AI Content Verification on Blockchain",
               desc: "Decentralized AI content authenticity platform — GPT-4o analysis with on-chain proof storage via smart contracts and ERC-20 token payment system.",
               tags: ["AI", "GPT-4o", "Solidity", "NestJS", "Blockchain"],
               href: "/projects/truchain-ai-content-checker",
@@ -197,11 +292,11 @@ export default function HomePage() {
             <div>
               <h3 className="text-white font-semibold text-lg mb-2">Ask Anvar AI</h3>
               <p className="text-slate-400 text-sm mb-4">
-                Have questions? My AI assistant answers recruiter questions about my experience, projects,
-                and skills — powered by RAG over my actual resume and project data. No hallucinations.
+                Have questions? My AI assistant answers questions about my experience, projects,
+                and technical skills — powered by a RAG pipeline over my actual resume and project data.
               </p>
               <p className="text-sky-400 text-sm font-medium">
-                👇 Click the chat button in the bottom-right corner to get started.
+                Click the chat button in the bottom-right corner to get started.
               </p>
             </div>
           </div>

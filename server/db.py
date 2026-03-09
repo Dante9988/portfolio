@@ -35,7 +35,11 @@ def init_db():
     conn = get_connection()
     conn.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
     cur = conn.cursor()
-    cur.execute(CREATE_EXTENSION_SQL)
+    try:
+        cur.execute(CREATE_EXTENSION_SQL)
+    except Exception as e:
+        print(f"Warning: Could not create vector extension: {e}")
+        print("Trying without extension — table will be created without vector column.")
     cur.execute(CREATE_TABLE_SQL)
     try:
         cur.execute(CREATE_INDEX_SQL)
@@ -44,3 +48,4 @@ def init_db():
     conn.commit()
     cur.close()
     conn.close()
+    print("Database schema initialized successfully.")

@@ -16,11 +16,25 @@ interface ProjectMeta {
   period?: string;
 }
 
+const PROJECT_ORDER: string[] = [
+  "onlypump",
+  "ai-devops-workflow",
+  "codepilot-ai",
+  "openaudit-ai",
+  "truchain-ai-content-checker",
+  "portfolio-ai",
+  "ccnext-bridge-worker",
+  "airdrop-claim",
+  "dex-tools",
+  "polymarket-bot",
+  "substrate-explorer",
+];
+
 function getProjects(): ProjectMeta[] {
   const projectsDir = path.join(process.cwd(), "data", "projects");
   const files = fs.readdirSync(projectsDir).filter((f) => f.endsWith(".md"));
 
-  return files.map((filename) => {
+  const projects = files.map((filename) => {
     const filePath = path.join(projectsDir, filename);
     const raw = fs.readFileSync(filePath, "utf-8");
     const { data } = matter(raw);
@@ -36,6 +50,14 @@ function getProjects(): ProjectMeta[] {
       period: data.period || "",
     };
   });
+
+  projects.sort((a, b) => {
+    const ai = PROJECT_ORDER.indexOf(a.slug);
+    const bi = PROJECT_ORDER.indexOf(b.slug);
+    return (ai === -1 ? 999 : ai) - (bi === -1 ? 999 : bi);
+  });
+
+  return projects;
 }
 
 export default function ProjectsPage() {
@@ -46,8 +68,8 @@ export default function ProjectsPage() {
       <div className="mb-12">
         <h1 className="text-4xl font-bold text-white mb-4">Projects</h1>
         <p className="text-slate-400 text-lg max-w-2xl">
-          A curated selection of projects I&apos;ve built or contributed to — from AI/RAG systems to blockchain
-          testing frameworks.
+          A curated selection of projects I&apos;ve built — spanning AI systems, blockchain infrastructure,
+          DeFi tooling, and backend engineering.
         </p>
       </div>
 

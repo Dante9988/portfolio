@@ -1,29 +1,40 @@
-# Anvar Baltakhojayev – Portfolio + Anvar AI
+# Anvar Baltakhojayev – AI & Blockchain Portfolio
 
-A personal portfolio website with an embedded AI chatbot ("**Anvar AI**") that answers recruiter questions using Retrieval-Augmented Generation (RAG) over resume data and curated project summaries.
+A full-stack developer portfolio with an embedded RAG-powered AI chatbot (**Anvar AI**) that answers recruiter questions grounded in real resume and project data. Built as a monorepo with a Next.js frontend and a Python FastAPI backend connected by a RAG pipeline backed by PostgreSQL + pgvector.
+
+**Live**: [anvar.dev](https://anvar.dev)
 
 ## Tech Stack
 
 | Layer | Technology |
 |-------|-----------|
-| Frontend | Next.js 14 (App Router) + TypeScript + TailwindCSS |
-| AI Backend | Python FastAPI + LlamaIndex/OpenAI |
-| Vector DB | PostgreSQL + pgvector |
-| Embeddings | text-embedding-3-small (OpenAI) |
-| LLM | GPT-4.1-mini (configurable) |
-| Infrastructure | Docker + docker-compose |
+| Frontend | Next.js 14 (App Router), React 18, TypeScript, Tailwind CSS |
+| AI Backend | Python FastAPI, LangChain, OpenAI API |
+| Vector DB | PostgreSQL 16 + pgvector (IVFFlat cosine similarity) |
+| Embeddings | text-embedding-3-small (1536-dim) |
+| LLM | GPT-4.1-mini (configurable — supports OpenAI, Anthropic, Ollama) |
+| Infrastructure | Docker, Railway (backend), Vercel (frontend) |
 
 ## Features
 
-- **5 pages**: Home, Projects, Project Detail, Experience, Contact, Resume
-- **Floating AI chat widget** on every page (bottom-right)
-- **Streaming responses** with typewriter effect (SSE)
-- **RAG pipeline**: ingests resume + project markdown files → pgvector → retrieval → LLM
-- **Anti-hallucination guardrails**: model only answers from retrieved context
-- **Citations** shown under every AI response
-- **Quick question buttons** for recruiters
-- **Copy answer** button on every AI message
+- **11 curated projects** — AI systems, blockchain infrastructure, DeFi tooling, open source
+- **Floating AI chat widget** on every page with streaming SSE responses
+- **RAG pipeline**: resume + project markdown → chunking → embedding → pgvector → retrieval → LLM
+- **Anti-hallucination guardrails**: model only answers from retrieved context with 8 enforced rules
+- **Citations** under every AI response with source metadata
+- **Tech stack grid** with devicon/simple-icons logos across 6 categories
+- **Core Expertise** section with AI, Blockchain, Backend, and Reliability tags
+- **Experience timeline** with 5 key companies + earlier career summary
 - One-command Docker setup
+
+## Projects Showcased
+
+| Category | Projects |
+|----------|----------|
+| AI Systems | OnlyPump (investment intelligence), AI DevOps Bot (RAG + Kubernetes), CodePilot AI, OpenAudit AI, TruChain, Portfolio AI |
+| Blockchain | CCNext Bridge Worker, ERC-2612 Airdrop, DEX Tools (Uniswap V3) |
+| Quantitative | Polymarket Market-Making Bot |
+| Full-Stack | Substrate Blockchain Explorer |
 
 ---
 
@@ -35,8 +46,6 @@ A personal portfolio website with an embedded AI chatbot ("**Anvar AI**") that a
 - Python 3.11+
 - Docker + Docker Compose
 - An OpenAI API key
-
----
 
 ### 1. Clone & configure environment
 
@@ -70,35 +79,14 @@ pip install -r server/requirements.txt
 
 ### 4. Run the ingestion pipeline
 
-This reads all files in `/data/`, chunks them, embeds them with OpenAI, and upserts into pgvector:
-
 ```bash
 python -m server.scripts.ingest
-```
-
-You should see output like:
-```
-=== Anvar Portfolio Ingestion Pipeline ===
-Loading documents...
-  Loaded resume.txt (2847 chars)
-  Loaded about.md (1923 chars)
-  Loaded onlypumpme.md (2341 chars)
-  ...
-Total chunks: 42
-Generating embeddings...
-  Embedding batch 1/3... done. Upserting...
-=== Ingestion complete! 42 chunks upserted into pgvector. ===
 ```
 
 ### 5. Start the FastAPI server
 
 ```bash
 uvicorn server.main:app --reload --port 8000
-```
-
-Or with the module path:
-```bash
-python -m uvicorn server.main:app --reload --port 8000
 ```
 
 API docs available at: http://localhost:8000/docs
@@ -112,7 +100,7 @@ npm install
 npm run dev
 ```
 
-Open http://localhost:3000 — the portfolio is live with the AI chatbot!
+Open http://localhost:3000
 
 ---
 
@@ -121,69 +109,76 @@ Open http://localhost:3000 — the portfolio is live with the AI chatbot!
 ```
 /
 ├── app/                        # Next.js App Router
-│   ├── layout.tsx              # Root layout (Navbar + ChatWidget)
-│   ├── page.tsx                # Home page
+│   ├── page.tsx                # Home (hero, stats, tech stack, expertise, featured projects)
 │   ├── projects/
-│   │   ├── page.tsx            # Projects list
-│   │   └── [slug]/page.tsx     # Project detail
+│   │   ├── page.tsx            # Projects list (sorted: AI first)
+│   │   └── [slug]/page.tsx     # Project detail (markdown rendered)
 │   ├── experience/page.tsx     # Experience timeline
 │   ├── contact/page.tsx        # Contact form
-│   ├── resume/page.tsx         # Resume download + preview
-│   └── api/chat/route.ts       # Next.js API proxy → FastAPI
+│   └── resume/page.tsx         # Resume download + preview
 │
 ├── components/
 │   ├── Navbar.tsx              # Sticky navigation
 │   └── ChatWidget.tsx          # Floating AI chat drawer
 │
-├── data/                       # Your content (edit these!)
-│   ├── resume.txt              # Your resume in plain text
-│   ├── about.md                # About me / highlights
+├── data/                       # Content (edit these — drives both UI and RAG)
+│   ├── resume.txt              # Resume in plain text
+│   ├── about.md                # About / skills / experience breakdown (RAG knowledge base)
 │   └── projects/               # One .md file per project
 │       ├── onlypumpme.md
-│       ├── creditcoin-sdet.md
-│       ├── legalbot.md
-│       └── portfolio-ai.md
+│       ├── ai-devops-workflow.md
+│       ├── codepilot-ai.md
+│       ├── openaudit-ai.md
+│       ├── truchain-ai-content-checker.md
+│       ├── portfolio-ai.md
+│       ├── ccnext-bridge-worker.md
+│       ├── airdrop-claim.md
+│       ├── dex-tools.md
+│       ├── polymarket-bot.md
+│       └── substrate-explorer.md
+│
+├── public/icons/               # Local SVG icons (OpenAI, RAG, Vector DB)
 │
 ├── server/                     # FastAPI backend
-│   ├── main.py                 # FastAPI app + chat endpoints
-│   ├── config.py               # Settings (env vars)
+│   ├── main.py                 # FastAPI app + chat endpoints (SSE streaming)
+│   ├── config.py               # Settings (env vars via pydantic-settings)
 │   ├── db.py                   # DB init + schema migration
 │   ├── rag/
-│   │   ├── retriever.py        # Chunking, embedding, retrieval
+│   │   ├── retriever.py        # Chunking, embedding, cosine retrieval
 │   │   └── prompts.py          # System prompt + prompt builder
 │   ├── scripts/
-│   │   └── ingest.py           # Ingestion pipeline script
+│   │   └── ingest.py           # Ingestion pipeline (idempotent upserts)
 │   └── requirements.txt
 │
-├── styles/globals.css          # TailwindCSS + custom styles
+├── styles/globals.css          # TailwindCSS + custom component classes
 ├── docker-compose.yml          # PostgreSQL + pgvector
+├── Dockerfile                  # FastAPI production image
 ├── .env.example                # Environment variable template
+├── TECH_STACK.md               # Detailed architecture documentation
 └── README.md
 ```
 
 ---
 
-## Customizing Your Portfolio
+## Content & RAG System
 
-### Adding your real resume
+All portfolio content lives as flat files in `data/`. There is no CMS. These files serve double duty:
 
-1. Open `/data/resume.txt`
-2. Replace the placeholder content with your actual resume text
-3. Re-run ingestion: `python -m server.scripts.ingest`
+1. **UI rendering** — Next.js server components read project `.md` files directly to render the projects pages
+2. **RAG ingestion** — The ingestion script chunks, embeds, and upserts all content into pgvector so the AI chatbot can answer questions about it
 
 ### Adding a project
 
-Create a new markdown file in `/data/projects/your-project.md`:
+Create a new `.md` file in `data/projects/`:
 
 ```markdown
 ---
 title: "Your Project Name"
 slug: "your-project"
-tags: ["AI", "Python", "FastAPI"]
-stack: ["Python", "FastAPI", "PostgreSQL"]
-summary: "One sentence summary for the projects list."
-github: "https://github.com/you/your-project"
-demo: "https://your-project.com"
+tags: ["AI", "Python"]
+stack: ["Python", "FastAPI"]
+summary: "One sentence summary."
+github: "https://github.com/you/repo"
 role: "Lead Engineer"
 period: "2024"
 ---
@@ -191,17 +186,26 @@ period: "2024"
 # Your Project Name
 
 ## Overview
-...detailed markdown content...
+...
 ```
 
-The project will automatically appear on the `/projects` page and be ingested by the RAG pipeline.
+The project automatically appears on `/projects` and gets ingested into the RAG pipeline.
 
-### Changing the LLM model
+### Re-running ingestion
 
-In `.env`:
+The ingestion script is idempotent — safe to re-run at any time:
+
+```bash
+python -m server.scripts.ingest
 ```
+
+### Changing the LLM
+
+```bash
+# .env
 OPENAI_MODEL=gpt-4o
-# or for a local model via Ollama:
+
+# Or use Ollama / any OpenAI-compatible provider:
 OPENAI_BASE_URL=http://localhost:11434/v1
 OPENAI_MODEL=llama3
 ```
@@ -210,81 +214,19 @@ OPENAI_MODEL=llama3
 
 ## API Reference
 
-### POST `/api/chat` (non-streaming)
-
-```json
-{
-  "message": "What is Anvar's experience with RAG?",
-  "history": [
-    {"role": "user", "content": "..."},
-    {"role": "assistant", "content": "..."}
-  ],
-  "stream": false
-}
-```
-
-Response:
-```json
-{
-  "answer": "Anvar has built...",
-  "citations": [
-    {"chunk_id": "abc123", "source": "resume.txt", "title": "Resume", "doc_type": "resume"}
-  ]
-}
-```
-
-### POST `/api/chat/stream` (Server-Sent Events)
-
-Same request body. Returns SSE stream:
-
-```
-data: {"type": "citations", "citations": [...]}
-
-data: {"type": "token", "content": "Anvar "}
-data: {"type": "token", "content": "has "}
-...
-data: [DONE]
-```
-
----
-
-## Anti-Hallucination Design
-
-The AI assistant is constrained by these rules (enforced via system prompt):
-
-1. **Only use retrieved context** — never invent employers, dates, titles, metrics, or technologies
-2. **Acknowledge uncertainty** — if context is insufficient, say "I don't have that information"
-3. **Evidence bullets** — include 1–3 cited bullet points when answering factual questions
-4. **Always return citations** — every response includes source metadata
-5. **Weak retrieval fallback** — if similarity scores are low, ask a clarifying question instead of guessing
-
----
-
-## Re-running Ingestion
-
-The ingestion script is **idempotent** — safe to re-run at any time:
-
-```bash
-python -m server.scripts.ingest
-```
-
-It uses `ON CONFLICT DO UPDATE` (upsert) so existing chunks are updated, not duplicated.
+| Method | Path | Description |
+|--------|------|-------------|
+| `GET` | `/health` | Liveness probe |
+| `POST` | `/api/chat` | Non-streaming RAG response |
+| `POST` | `/api/chat/stream` | Streaming RAG response via SSE |
 
 ---
 
 ## Deployment
 
-### FastAPI (Railway / Render / Fly.io)
+**Backend** (Railway): Set `DATABASE_URL`, `OPENAI_API_KEY`, and deploy. The `start.sh` script runs ingestion then starts uvicorn.
 
-1. Set all environment variables from `.env.example`
-2. Set `DATABASE_URL` to your managed PostgreSQL URL with pgvector extension
-3. Deploy with: `uvicorn server.main:app --host 0.0.0.0 --port $PORT`
-4. Run ingestion once after deploy: `python -m server.scripts.ingest`
-
-### Next.js (Vercel)
-
-1. Set `FASTAPI_URL` to your deployed FastAPI URL
-2. Deploy via `vercel --prod`
+**Frontend** (Vercel): Set `FASTAPI_URL` to the deployed backend URL and deploy via `vercel --prod`.
 
 ---
 

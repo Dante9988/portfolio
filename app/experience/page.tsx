@@ -3,128 +3,87 @@ import { Briefcase, Calendar, ExternalLink } from "lucide-react";
 const experiences = [
   {
     company: "OnlyPumpMe",
-    role: "AI Systems Engineer | Distributed Backend | ML Infrastructure",
-    period: "Jun 2021 – Present",
+    role: "AI Systems Engineer",
+    period: "2024 – Present",
     location: "Remote",
     url: "",
     description:
-      "Built and led development of AI-powered analytics and decision-support systems integrating LLMs and on-chain data on the Pump.fun/Solana ecosystem.",
+      "Building an AI-powered investment intelligence platform on the Pump.fun/Solana ecosystem — adaptive risk profiling, RAG pipelines, statistically validated scoring models, and multi-source intelligence.",
     highlights: [
-      "Built and led development of AI-powered analytics and decision-support systems integrating LLMs and on-chain data",
-      "Designed backend services for token launches, trading events, and blockchain transaction workflows on Solana",
-      "Implemented RAG-based intelligence pipelines using embeddings and vector databases",
-      "Developed AI agents for sentiment analysis, portfolio insights, and operational automation",
-      "Architected distributed backend infrastructure using TypeScript, NestJS, and blockchain SDK integrations",
-      "Led infrastructure deployment, monitoring, and scaling decisions",
+      "Built AI system that adapts to each user's investing style — aggressive, moderate, or conservative — with different signal weightings and risk thresholds",
+      "Designed multi-source intelligence system combining social sentiment, on-chain wallet analysis, and real-time market data",
+      "Built RAG pipelines and vector database infrastructure for contextual market insights grounded in historical token launch data",
+      "Developed statistical backtesting framework with Sharpe ratio, win rate, drawdown analysis, and Monte Carlo simulation to validate scoring models",
+      "Implemented AI agents for sentiment analysis, portfolio risk assessment, and position sizing optimization",
+      "Integrated Pump.fun SDK, PumpSwap SDK, and Jito MEV bundles for production Solana trading infrastructure",
     ],
-    stack: ["Python", "TypeScript", "NestJS", "LangChain", "OpenAI", "RAG", "Vector Databases", "Solana Web3.js", "Pump.fun SDK", "PumpSwap SDK", "Jito"],
+    stack: ["Python", "TypeScript", "NestJS", "LangChain", "OpenAI", "RAG", "Vector Databases", "Solana Web3.js", "Pump.fun SDK", "Jito"],
   },
   {
     company: "Gluwa",
-    role: "Software Engineer (AI & Distributed Systems)",
-    period: "Nov 2021 – Present",
+    role: "Software Engineer – AI, Blockchain & Backend Systems",
+    period: "Nov 2021 – Feb 2026",
     location: "Remote",
     url: "https://gluwa.com",
     description:
-      "Designed distributed validation infrastructure for multi-chain blockchain systems and built AI-powered backend services for CI/CD diagnostics and operational intelligence.",
+      "Built production blockchain infrastructure and AI-powered engineering tools for the Creditcoin ecosystem — a multi-chain network spanning Ethereum, BNB Chain, Bitcoin, and Substrate.",
     highlights: [
-      "Designed distributed validation infrastructure for multi-chain blockchain systems",
-      "Built AI-powered backend services for failure analysis, CI/CD diagnostics, and release monitoring",
-      "Implemented RAG-based internal knowledge systems accelerating debugging workflows",
-      "Developed Python-based AI agents for log analysis, anomaly detection, and operational health evaluation",
-      "Validated cross-chain relayers, bridges, indexers, and transaction pipelines",
-      "Optimized CI/CD pipelines with containerization, parallel execution, and environment isolation",
+      "Built production cross-chain bridge worker orchestrating Ethereum → CCNext L2 transfers with cryptographic proof generation and exponential backoff retry",
+      "Designed and deployed ERC-2612 airdrop distribution system with EIP-712 signatures, campaign lifecycle management, and abuse prevention",
+      "Deployed full Uniswap V3 protocol stack and custom GluwaDEX infrastructure with CLI tooling and integration test suites",
+      "Built AI DevOps Slack bot with RAG pipeline, vector DB retrieval, LangChain orchestration, and multi-provider LLM support (OpenAI, Anthropic, fine-tuned Ollama models)",
+      "Implemented Kubernetes pod lifecycle management (restart, delete, create) through structured LLM prompts with safety confirmations",
+      "Developed distributed validation infrastructure for multi-chain blockchain systems (Ethereum, BNB Chain, Bitcoin, Substrate)",
+      "Architected CI/CD pipelines with containerization, parallel execution, and multi-environment deployment automation",
     ],
-    stack: ["TypeScript", "C# (.NET 6)", "Python", "Node.js", "NestJS", "Polkadot.js", "ethers.js", "viem", "Playwright", "Foundry", "Docker", "Azure"],
+    stack: ["TypeScript", "Python", "C# (.NET 6)", "NestJS", "OpenAI", "Anthropic", "LangChain", "Ollama", "Kubernetes", "Polkadot.js", "ethers.js", "viem", "Foundry", "Hardhat", "Docker", "Azure"],
   },
   {
     company: "Hxro Labs",
-    role: "Software Engineer (Backend & Distributed Systems)",
+    role: "Software Engineer – Backend & Distributed Systems",
     period: "Nov 2020 – Oct 2021",
     location: "Remote",
     url: "",
     description:
-      "Contributed to backend infrastructure of a real-time binary options trading platform supporting high-frequency event-driven workflows.",
+      "Contributed to backend infrastructure for a real-time binary options trading platform supporting high-frequency event-driven workflows.",
     highlights: [
-      "Contributed to backend infrastructure of a real-time binary options trading platform",
-      "Built REST API and WebSocket validation services for real-time market data streams",
+      "Built backend services for real-time binary options trading platform",
+      "Developed REST API and WebSocket services for real-time market data stream processing",
       "Implemented transaction validation logic and edge-case handling for financial workflows",
-      "Integrated backend services into GitLab CI/CD pipelines for reliability validation",
+      "Integrated backend services into GitLab CI/CD pipelines for deployment automation",
     ],
     stack: ["Python", "WebSocket", "REST APIs", "GitLab CI/CD"],
   },
   {
     company: "Dust Foundation",
-    role: "Blockchain Developer (Part-Time)",
+    role: "Blockchain Developer",
     period: "Apr 2021 – Aug 2021",
-    location: "Remote",
+    location: "Remote (Part-Time)",
     url: "",
     description:
       "Developed decentralized exchange components and optimized smart contract infrastructure for ERC-20 tokens.",
     highlights: [
       "Developed decentralized exchange (DEX) components for ERC-20 tokens",
-      "Executed smart contracts using Truffle and Ganache",
-      "Optimized smart contract storage and gas efficiency",
-      "Ensured security best practices during contract development",
+      "Built and deployed smart contracts using Truffle and Ganache",
+      "Optimized smart contract storage patterns and gas efficiency",
+      "Applied security best practices during contract development",
     ],
     stack: ["Solidity", "Truffle", "Ganache", "ERC-20", "Ethereum"],
   },
   {
-    company: "Apple (Hogarth)",
-    role: "QA Engineer (Contract)",
+    company: "Apple (via Hogarth)",
+    role: "Software Engineer in Test",
     period: "Feb 2020 – Jul 2020",
     location: "Sunnyvale, CA",
     url: "",
     description:
-      "Worked within cross-functional engineering teams supporting iOS and Android platforms at Apple.",
+      "Built automated validation infrastructure for iOS and Android platforms within Apple's cross-functional engineering teams.",
     highlights: [
-      "Worked within cross-functional engineering teams supporting iOS and Android platforms",
-      "Performed smoke, regression, and system-level validation testing",
-      "Contributed to release readiness workflows and defect triage processes",
+      "Developed automated validation frameworks for iOS and Android release pipelines using Python",
+      "Contributed to release readiness workflows and system-level validation processes",
+      "Collaborated with cross-functional engineering teams on platform reliability",
     ],
-    stack: ["iOS", "Android", "Manual Testing", "Regression Testing"],
-  },
-  {
-    company: "RideCell",
-    role: "QA Automation Engineer",
-    period: "May 2019 – Jan 2020",
-    location: "San Francisco, CA",
-    url: "",
-    description:
-      "Designed Page Object Model automation frameworks and behavior-driven testing workflows for a mobility SaaS platform.",
-    highlights: [
-      "Designed Page Object Model automation frameworks following OOP principles",
-      "Executed behavior-driven testing workflows integrated into CI pipelines",
-    ],
-    stack: ["Python", "Selenium", "BDD", "CI/CD", "Page Object Model"],
-  },
-  {
-    company: "Tally Technologies",
-    role: "QA Engineer",
-    period: "May 2018 – May 2019",
-    location: "San Francisco, CA",
-    url: "",
-    description:
-      "Performed API, SQL, and web validation testing for fintech systems.",
-    highlights: [
-      "Performed API, SQL, and web validation testing for fintech systems",
-      "Collaborated with developers to improve feature stability and deployment readiness",
-    ],
-    stack: ["API Testing", "SQL", "Web Testing", "Fintech"],
-  },
-  {
-    company: "Infomatrix Global Inc.",
-    role: "Software Quality Assurance Engineer",
-    period: "Sep 2016 – May 2018",
-    location: "Denver, CO",
-    url: "",
-    description:
-      "Tested web and mobile applications across Android and iOS platforms.",
-    highlights: [
-      "Tested web and mobile applications across Android and iOS platforms",
-      "Designed test plans, executed detailed test cases, and validated system modifications",
-    ],
-    stack: ["Android", "iOS", "Test Planning", "Mobile Testing"],
+    stack: ["Python", "iOS", "Android", "Automation Frameworks", "CI/CD"],
   },
 ];
 
@@ -134,8 +93,9 @@ export default function ExperiencePage() {
       <div className="mb-12">
         <h1 className="text-4xl font-bold text-white mb-4">Experience</h1>
         <p className="text-slate-400 text-lg max-w-2xl">
-          10+ years progressing from QA engineering into distributed backend systems, blockchain infrastructure,
-          and AI systems engineering — across real-time trading, multi-chain validation, and LLM-powered analytics platforms.
+          10+ years in engineering — 6 years in software engineering, 4 years as an AI Systems Engineer,
+          and 6 years building ML infrastructure. From automation engineering into distributed backend systems,
+          blockchain infrastructure, and AI/LLM-powered platforms.
         </p>
       </div>
 
@@ -202,9 +162,27 @@ export default function ExperiencePage() {
         </div>
       </div>
 
-      {/* Education */}
-      <div className="mt-16">
-        <h2 className="text-2xl font-semibold text-white mb-6">Education</h2>
+      {/* Earlier Career + Education */}
+      <div className="mt-16 space-y-6">
+        <div className="card">
+          <h3 className="text-white font-semibold mb-2">Earlier Career (2016–2020)</h3>
+          <p className="text-slate-400 text-sm leading-relaxed">
+            Prior roles in automation engineering and software validation at Ridecell, Tally Technologies,
+            and Infomatrix Global — building automated validation frameworks in Python, API and database
+            testing infrastructure, and CI-integrated reliability tooling. Full details available on{" "}
+            <a
+              href="https://linkedin.com/in/anvarbaltakhojayev"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sky-400 hover:text-sky-300 transition-colors"
+            >
+              LinkedIn
+            </a>{" "}
+            or by request.
+          </p>
+        </div>
+
+        <h2 className="text-2xl font-semibold text-white">Education</h2>
         <div className="card">
           <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
             <div>
