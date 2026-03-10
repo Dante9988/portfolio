@@ -75,20 +75,19 @@ export default function HomePage() {
               </span>
               <br />
               <span className="text-3xl md:text-4xl text-slate-400 font-medium">
-                AI &amp; Blockchain Systems Engineer
+                Senior AI Systems Engineer
               </span>
             </h1>
 
             <p className="text-lg text-slate-400 max-w-2xl mb-10 leading-relaxed">
-              I&apos;ve contributed to over{" "}
-              <span className="text-white font-semibold">1M+ lines of code</span> across
-              production AI systems and blockchain infrastructure — RAG pipelines,
-              LLM orchestration, smart contracts, and cross-chain workers on{" "}
-              <span className="text-sky-400">Solana</span>,{" "}
-              <span className="text-sky-400">Ethereum</span>, and{" "}
+              10+ years building production AI systems, distributed backend infrastructure,
+              and blockchain platforms — RAG architectures, agentic AI workflows, LLM orchestration,
+              vector databases, smart contract security analysis, and cross-chain systems on{" "}
+              <span className="text-sky-400">Ethereum</span>,{" "}
+              <span className="text-sky-400">Solana</span>, and{" "}
               <span className="text-sky-400">Substrate</span>.
-              Currently building at{" "}
-              <span className="text-sky-400">OnlyPump</span>. Previously{" "}
+              Previously at{" "}
+              <span className="text-sky-400">OnlyPump</span>,{" "}
               <span className="text-sky-400">Gluwa</span>,{" "}
               <span className="text-sky-400">Hxro Labs</span>, and{" "}
               <span className="text-sky-400">Apple</span>.
