@@ -1,81 +1,110 @@
 ANVAR BALTAKHOJAYEV
-Austin, TX
+Senior Software Engineer in Test | AI Systems Engineer
+Mountain View, CA
+Portfolio: https://anvar.dev
 GitHub: https://github.com/Dante9988
 LinkedIn: https://linkedin.com/in/anvarbaltakhojayev
 
-─────────────────────────────────────────────────────────────
+-------------------------------------------------------------
 PROFESSIONAL SUMMARY
-─────────────────────────────────────────────────────────────
-AI Systems Engineer and Software Engineer with 10+ years of total experience: 6 years in software engineering (2020–present), 4 years in AI/LLM systems engineering (2022–present), 6 years in ML infrastructure (2020–present), and 5 years in blockchain engineering (2021–present). Career progression from automation engineering into backend systems, then deep into blockchain protocol work and AI systems engineering. Hands-on experience building RAG pipelines, LLM orchestration with LangChain, vector databases (pgvector), multi-provider LLM integration (OpenAI, Anthropic, Ollama/Meta Llama), cross-chain bridge workers, smart contract systems, Kubernetes automation, statistical backtesting, and real-time data platforms.
+-------------------------------------------------------------
+Senior Software Engineer in Test (SDET) with 10+ years of experience building automation frameworks, distributed backend systems, and developer tooling across blockchain and AI-enabled platforms. Strong background in Python and TypeScript automation, backend API validation, smart contract testing, and infrastructure reliability. Experience includes blockchain platforms (EVM, Solana, Substrate), performance testing, and building AI-assisted tooling using LLM integrations, RAG pipelines, and vector databases.
 
-─────────────────────────────────────────────────────────────
-CORE EXPERTISE
-─────────────────────────────────────────────────────────────
-• AI Systems Engineering: RAG pipelines, LangChain orchestration, LLM integration (OpenAI API, Anthropic API, Ollama/Meta Llama), vector databases (pgvector), prompt engineering, hallucination mitigation, AI agents, Kubernetes operations via structured LLM prompts
-• Blockchain Engineering: EVM (Solidity, Hardhat, Foundry, ethers.js, viem), Solana (Pump.fun, Jito MEV, PumpSwap), Substrate (Polkadot.js), cross-chain bridges, DeFi infrastructure (Uniswap V3)
-• Backend & Distributed Systems: NestJS, FastAPI, PostgreSQL, Redis, Docker, Kubernetes, multi-chain validation infrastructure, C# (.NET 6)
-• Reliability & Automation: CI/CD architecture (GitHub Actions, Azure Pipelines, GitLab CI), system validation frameworks, infrastructure tooling, developer workflow automation
+Anvar positions himself as a Senior Software Engineer in Test with AI systems engineering expertise and blockchain development background. His career started in QA automation (2016-2020), evolved into blockchain infrastructure testing and backend systems (2020-present), and now combines deep test engineering foundations with modern AI capabilities — building AI-powered test automation, RAG-based engineering assistants, and LLM-integrated developer tooling.
 
-─────────────────────────────────────────────────────────────
+-------------------------------------------------------------
+TECHNICAL SKILLS
+-------------------------------------------------------------
+Programming: Python, TypeScript, JavaScript, Solidity, Rust, C#, Java, SQL
+AI Systems: RAG, agentic AI, semantic search, embedding pipelines, prompt engineering, LLM evaluation
+AI Frameworks: LangChain, LangGraph, FastAPI, AI workflow automation
+Vector DBs: Chroma, Pinecone, Weaviate, Qdrant, Milvus, FAISS
+LLM Platforms: OpenAI, Anthropic, Ollama
+Backend: Node.js, NestJS, FastAPI, REST/GraphQL/WebSocket APIs
+Infrastructure: Docker, Redis, Linux, GitHub Actions, Jenkins, Azure DevOps, Kubernetes
+Blockchain: Ethereum (EVM), Solana, Substrate
+Smart Contracts: Hardhat, Anchor, Solidity, Foundry, Rust
+Testing: Playwright MCP, API automation, distributed systems, RestSharp, Selenium WebDriver
+Performance Testing: Locust, K6
+
+-------------------------------------------------------------
 PROFESSIONAL EXPERIENCE
-─────────────────────────────────────────────────────────────
+-------------------------------------------------------------
 
-OnlyPumpMe — AI Systems Engineer
-2024 – Present | Remote
-• Built AI investment intelligence platform that adapts to each user's investing style — aggressive, moderate, or conservative — with different signal weightings and risk thresholds.
-• Designed multi-source intelligence system combining social sentiment, on-chain wallet analysis, and real-time market data through RAG pipelines and vector databases.
-• Developed statistical backtesting framework with Sharpe ratio, win rate, drawdown analysis, and Monte Carlo simulation to validate scoring models against historical data.
-• Implemented AI agents for sentiment analysis, portfolio risk assessment, and position sizing optimization.
-• Integrated Pump.fun SDK, PumpSwap SDK, and Jito MEV bundles for production Solana trading infrastructure.
+Gluwa — Software Engineer in Test (AI Systems & Blockchain Infrastructure)
+Nov 2021 - Feb 2026 | Remote
+Software engineer responsible for testing, reliability engineering, and AI-assisted infrastructure tooling across distributed blockchain systems including Creditcoin (Substrate), EVM smart contract infrastructure, and Solana integrations.
+Led development of AI-powered engineering assistants and blockchain observability systems, combining LLM pipelines, semantic retrieval, and infrastructure telemetry to improve debugging and operational workflows for distributed engineering teams.
+Designed Retrieval-Augmented Generation (RAG) architectures where blockchain telemetry, infrastructure logs, smart contract repositories, and engineering documentation were chunked, embedded using semantic embedding models, indexed into Chroma vector databases, and retrieved through similarity search during AI agent reasoning workflows.
+Built LangChain-based AI agents capable of retrieving engineering context, querying vector stores, analyzing logs, and generating explanations for infrastructure incidents.
+Developed Python-based AI services integrated with CI/CD pipelines capable of analyzing build failures, deployment issues, and infrastructure anomalies across distributed blockchain environments.
+Implemented AI-assisted smart contract security workflows where Solidity contracts were parsed, embedded, indexed, and compared against known vulnerability patterns to assist engineers during security audits.
+Created and maintained CI/CD pipelines on Azure DevOps and GitHub Actions for testing purposes using multi Docker container approach.
+Implemented Playwright automation test suite that later integrated MCP to be AI driven front end automated test.
+Built backend API automation suites in C# to validate distributed backend services supporting blockchain infrastructure.
+Created Node.js / TypeScript CLI testing frameworks used to validate SDKs, indexers, and developer tooling.
+Built Hardhat-based testing environments to simulate decentralized exchange activity and validate indexer correctness.
+Implemented automated testing pipelines validating blockchain events, database states, and notification systems.
+Created Azure DevOps and GitHub Actions YAML pipelines to validate complex multi Docker image testing frameworks for release workflow of production products.
+Created comprehensive End-to-End tests from API, smart contract interaction to Database SQL validation using dependency injection services.
+Built custom performance testing frameworks for distributed backend systems.
+Implemented load testing using Python and Locust to simulate high-traffic API workloads.
+Performed performance testing of Substrate blockchain pallets and extrinsics to measure execution performance and system throughput.
+Analyzed latency, throughput, and system bottlenecks across blockchain infrastructure and backend services.
+Designed transaction validation frameworks verifying correctness of blockchain state transitions and emitted events across EVM and Substrate environments.
+Built and maintained blockchain indexers and event processing pipelines used by backend systems to interpret on-chain activity.
+Tested cross-chain bridge infrastructure connecting EVM networks, Substrate chains, and Solana environments.
+Developed automated smart contract integration testing frameworks for Solidity contracts and decentralized exchange integrations.
+Deployed and tested Uniswap V3 contracts, building Hardhat-based environments to validate SDK behavior, swaps, liquidity operations, and routing logic.
+Built developer tooling that allowed engineering teams to reproduce complex blockchain transaction flows locally, improving debugging workflows and reducing issue resolution time.
+Designed automated validation systems ensuring consistency between on-chain events, indexer outputs, backend database states, and notification pipelines across distributed services.
 
-Gluwa — Software Engineer (AI, Blockchain & Backend Systems)
-Nov 2021 – Feb 2026 | Remote
-• Built production cross-chain bridge worker orchestrating Ethereum → CCNext L2 transfers with cryptographic proof generation and exponential backoff retry.
-• Designed and deployed ERC-2612 airdrop distribution system with EIP-712 signatures, campaign lifecycle management, and abuse prevention.
-• Deployed full Uniswap V3 protocol stack and custom GluwaDEX infrastructure with CLI tooling.
-• Built AI DevOps Slack bot with RAG pipeline, vector database retrieval (pgvector), LangChain orchestration, and multi-provider LLM support (OpenAI API, Anthropic API, fine-tuned Ollama/Meta Llama models).
-• Implemented Kubernetes pod lifecycle management (restart, delete, create) through structured LLM prompts with safety confirmations.
-• Significantly reduced LLM hallucinations through RAG, structured context retrieval, and constrained prompts.
-• Developed distributed validation infrastructure for multi-chain blockchain systems (Ethereum, BNB Chain, Bitcoin, Substrate).
-• Architected CI/CD pipelines with containerization, parallel execution, and multi-environment deployment automation.
-
-Hxro Labs — Software Engineer (Backend & Distributed Systems)
-Nov 2020 – Oct 2021 | Remote
-• Built backend services for real-time binary options trading platform.
-• Developed REST API and WebSocket services for real-time market data stream processing.
-• Implemented transaction validation logic and edge-case handling for financial workflows.
-• Integrated backend services into GitLab CI/CD pipelines for deployment automation.
+Hxro Labs — Software Engineer (Trading Infrastructure & Automation)
+Nov 2020 - Oct 2021 | Remote
+Engineering contributor to Hxro, one of the first binary options trading platforms built on the Solana blockchain, supporting real-time trading workflows and high-frequency market data.
+Designed and implemented comprehensive testing infrastructure from scratch to ensure reliability of backend APIs, trading systems, and frontend user interfaces in a latency-sensitive financial environment.
+Developed a Python-based automation framework used to validate trading APIs, transaction flows, and backend services handling real-time market data and trading events.
+Built automated validation systems verifying order submission and execution flows, market data integrity, transaction validation logic, and backend state consistency during trading operations.
+Implemented frontend automation using Playwright, creating end-to-end test suites validating real user trading workflows including order placement, market interactions, and UI behavior during live trading conditions.
+Later extended the automation system to support AI-assisted test orchestration, integrating MCP-based workflows allowing intelligent generation and execution of frontend tests.
+Integrated testing infrastructure with CI/CD pipelines, enabling automated validation of releases before deployment to production trading environments.
 
 Dust Foundation — Blockchain Developer (Part-Time)
-Apr 2021 – Aug 2021 | Remote
-• Developed decentralized exchange (DEX) components for ERC-20 tokens.
-• Built and deployed smart contracts using Truffle and Ganache.
-• Optimized smart contract storage patterns and gas efficiency.
+Apr 2021 - Aug 2021 | Remote
+Developed decentralized exchange components for ERC-20 token ecosystems.
+Implemented Solidity smart contracts using Truffle and Ganache testing frameworks.
+Optimized contract storage layout and gas efficiency while maintaining security best practices.
 
-Apple (via Hogarth) — Software Engineer in Test
-Feb 2020 – Jul 2020 | Sunnyvale, CA
-• Developed automated validation frameworks for iOS and Android release pipelines using Python.
-• Contributed to release readiness workflows within cross-functional engineering teams.
+Apple (Hogarth) — QA Engineer (Contract)
+Feb 2020 - Jul 2020 | Sunnyvale, CA
+Worked with cross-functional engineering teams supporting Apple web and mobile product ecosystems, contributing to quality assurance and release validation for high-traffic consumer platforms.
+Developed automation scripts using Python and Selenium WebDriver to test critical workflows on apple.com, validating UI behavior and system functionality across multiple browsers and environments.
+Performed API testing and backend validation to verify data integrity and service responses supporting frontend applications.
+Executed regression testing and system validation to ensure release readiness for iOS and Android product-related web services.
 
-Earlier Career (2016–2020): Automation engineering roles at Ridecell, Tally Technologies, and Infomatrix Global — building automated validation frameworks in Python, API and database testing infrastructure, and CI-integrated reliability tooling. Details on LinkedIn.
+RideCell — QA Automation Engineer
+May 2019 - Jan 2020 | San Francisco, CA
+Designed automated UI testing frameworks using the Page Object Model.
+Implemented automated test pipelines integrated with CI systems improving deployment confidence.
 
-─────────────────────────────────────────────────────────────
-OPEN SOURCE PROJECTS
-─────────────────────────────────────────────────────────────
-• CodePilot AI (https://github.com/NeuroForgeLabs/CodePilot-AI) — AI-powered coding interview preparation platform. 100 curated problems, 9 languages, AI coaching, code execution via Judge0. Next.js 14 + FastAPI.
-• OpenAudit AI (https://github.com/openauditai/openaudit-ai) — AI-powered smart contract security analyzer. Static analysis + LLM-powered vulnerability explanations. Python CLI with extensible rule engine.
+Tally Technologies — QA Engineer
+May 2018 - May 2019 | San Francisco, CA
+Performed API testing, SQL validation, and web testing for fintech applications.
+Collaborated with developers to improve reliability of financial platform features.
 
-─────────────────────────────────────────────────────────────
-TECHNICAL STACK
-─────────────────────────────────────────────────────────────
-Languages:       Python, TypeScript, JavaScript, Rust, Solidity, C#, Java
-AI/LLM:          OpenAI API, Anthropic API, LangChain, RAG, Vector Databases (pgvector), Ollama (Meta Llama), AI Agents, Prompt Engineering
-Blockchain:      EVM (ethers.js, viem, Hardhat, Foundry), Solana (Web3.js, Pump.fun, Jito), Substrate (Polkadot.js)
-Backend:         NestJS, FastAPI, PostgreSQL, Redis, Docker, Kubernetes, WebSocket, REST APIs
-Frontend:        React, Next.js, TypeScript, Tailwind CSS
-Infrastructure:  Docker, Kubernetes, Azure DevOps, GitHub Actions, GitLab CI/CD, Railway, Vercel, Linux
+Infomatrix Global Inc. — QA Engineer
+Sep 2016 - May 2018 | Denver, CO
+Tested web and mobile applications across Android and iOS platforms.
+Designed test plans and executed detailed validation workflows ensuring software quality.
 
-─────────────────────────────────────────────────────────────
+-------------------------------------------------------------
+SELECTED AI PROJECTS
+-------------------------------------------------------------
+OpenAudit AI — Built an open-source deterministic Solidity smart contract security analyzer combining AST-based static analysis, rule-engine driven findings, and an optional AI explanation layer for CI/CD-friendly security workflows.
+CodePilotAI — Developed an AI interview preparation platform with simulated coding environments, modern AI engineering exercises, LLM-assisted evaluation, and recruiter-aligned coding challenge practice.
+Jarvis AI Assistant — Designed a cross-device AI assistant orchestrator connecting phone, laptop, desktop, browser, and future smart devices through a FastAPI backend, agent protocol, and LLM-powered orchestration layer.
+
+-------------------------------------------------------------
 EDUCATION
-─────────────────────────────────────────────────────────────
+-------------------------------------------------------------
 B.S. Computer Science — The University of Texas at Austin

@@ -5,7 +5,7 @@ tags: ["AI", "RAG", "LangChain", "Solana", "Pump.fun", "LLM", "Vector DB", "Pyth
 stack: ["Python", "Node.js", "NestJS", "LangChain", "OpenAI", "RAG", "Vector Databases", "Solana Web3.js", "Pump.fun SDK", "PumpSwap SDK", "Jito", "REST APIs", "Data Pipelines"]
 summary: "AI-powered investment intelligence platform on Pump.fun/Solana that adapts to each user's investing style — from aggressive to conservative. Multi-source signal processing (social sentiment, on-chain wallet behavior, market data) fed through RAG pipelines, LLM-powered scoring, and statistically validated through backtesting with historical data."
 github: "https://github.com/Dante9988/OnlyPump"
-demo: ""
+demo: "https://onlypump.me/"
 role: "AI Systems Engineer"
 period: "2024 – Present"
 ---
@@ -15,6 +15,8 @@ period: "2024 – Present"
 ## Overview
 
 OnlyPump is an AI-powered investment intelligence platform built on top of the Pump.fun and Solana ecosystem. It goes beyond analytics — the AI adapts to each user's investing style and risk tolerance, generating personalized investment signals calibrated for aggressive, moderate, or conservative strategies. The system combines social sentiment, on-chain behavior, and real-time market data into a unified AI decision layer, with every model validated through rigorous backtesting against historical data.
+
+**Live demo:** [https://onlypump.me/](https://onlypump.me/)
 
 I built and led the development of the core AI infrastructure from architecture through production deployment.
 

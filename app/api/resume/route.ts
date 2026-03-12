@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { readFile } from "fs/promises";
 import path from "path";
 
-const RESUME_PATH = path.join(process.cwd(), "data", "Anvar_AI_Engineer_Linkedin.docx");
+const RESUME_PATH = path.join(process.cwd(), "data", "Anvar_AI_SDET.docx");
 const FILENAME = "Anvar_Baltakhojayev_Resume.docx";
 
 export async function GET(request: Request) {

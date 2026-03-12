@@ -4,9 +4,9 @@ import { Navbar } from "@/components/Navbar";
 import { ChatWidget } from "@/components/ChatWidget";
 
 export const metadata: Metadata = {
-  title: "Anvar Baltakhojayev – AI Systems Engineer",
+  title: "Anvar Baltakhojayev – Senior SDET & AI Systems Engineer",
   description:
-    "Portfolio of Anvar Baltakhojayev – AI Systems Engineer specializing in LLM integration, RAG pipelines, and distributed blockchain infrastructure.",
+    "Portfolio of Anvar Baltakhojayev – Senior Software Engineer in Test & AI Systems Engineer. 10+ years in test automation, blockchain infrastructure, RAG pipelines, and AI-assisted developer tooling.",
 };
 
 export default function RootLayout({

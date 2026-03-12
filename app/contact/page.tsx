@@ -20,7 +20,7 @@ export default function ContactPage() {
       <div className="mb-12">
         <h1 className="text-4xl font-bold text-white mb-4">Contact</h1>
         <p className="text-slate-400 text-lg max-w-2xl">
-          I&apos;m open to AI Systems Engineer, distributed backend, and blockchain infrastructure roles.
+          I&apos;m open to Senior SDET, AI Systems Engineer, and blockchain infrastructure roles.
           Drop me a message or reach out on any of the channels below.
         </p>
       </div>

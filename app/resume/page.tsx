@@ -42,7 +42,7 @@ export default function ResumePage() {
           {/* Contact */}
           <div className="text-center border-b border-[#2a2d3a] pb-6">
             <h3 className="text-2xl font-bold text-white mb-1">Anvar Baltakhojayev</h3>
-            <p className="text-sky-400 text-sm mb-2">Senior AI Systems Engineer</p>
+            <p className="text-sky-400 text-sm mb-2">Senior Software Engineer in Test · AI Systems Engineer</p>
             <p className="text-slate-400 text-xs flex flex-wrap justify-center gap-x-3 gap-y-1">
               <span>Mountain View, CA</span>
               <span className="hidden sm:inline text-slate-600">·</span>
@@ -65,10 +65,10 @@ export default function ResumePage() {
             <h4 className="text-xs font-semibold text-sky-400 uppercase tracking-widest mb-3">Professional Summary</h4>
             <div className="text-slate-400 leading-relaxed space-y-3">
               <p>
-                Senior AI Systems Engineer and Full-Stack Backend Engineer with 10+ years of experience building distributed systems, AI infrastructure, and blockchain platforms. Specialized in designing production AI systems using Python, Retrieval-Augmented Generation (RAG), vector databases, agentic AI architectures, and LLM-integrated backend services.
+                Senior Software Engineer in Test (SDET) with 10+ years of experience building automation frameworks, distributed backend systems, and developer tooling across blockchain and AI-enabled platforms. Strong background in Python and TypeScript automation, backend API validation, smart contract testing, and infrastructure reliability.
               </p>
               <p>
-                Expert in integrating LLM reasoning with real infrastructure including CI/CD pipelines, developer tooling, blockchain transaction systems, interview simulation platforms, and smart contract security analysis workflows. Strong engineering background across Python, TypeScript, FastAPI, distributed backend architecture, AI orchestration, and developer-facing platforms used to build scalable AI-powered services.
+                Experience includes blockchain platforms (EVM, Solana, Substrate), performance testing, and building AI-assisted tooling using LLM integrations, RAG pipelines, and vector databases. Transitioning into AI-enabled SDET and AI systems engineering roles, combining deep QA foundations with modern AI engineering capabilities.
               </p>
             </div>
           </div>
@@ -78,21 +78,21 @@ export default function ResumePage() {
             <h4 className="text-xs font-semibold text-sky-400 uppercase tracking-widest mb-3">Core Skills</h4>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 text-slate-400">
               {[
-                "AI systems engineering",
-                "LLM application development",
-                "Agentic AI systems and orchestration",
+                "Python & TypeScript automation frameworks",
+                "Playwright / MCP-driven AI test automation",
+                "Backend API automation (C# RestSharp)",
+                "Smart contract testing (Hardhat, Foundry, Truffle)",
+                "Blockchain event & indexer validation",
+                "Cross-chain bridge testing",
+                "Performance testing (Locust, K6)",
                 "RAG system architecture",
-                "Vector database architecture",
-                "Semantic embedding pipelines",
-                "Prompt engineering and LLM evaluation",
-                "AI infrastructure and observability",
+                "LLM application development & AI agents",
                 "LangChain / LangGraph workflows",
-                "FastAPI and TypeScript backend services",
-                "AI DevOps and workflow automation",
-                "Distributed backend systems",
-                "REST / GraphQL / WebSocket APIs",
-                "Blockchain infrastructure (EVM, Solana, Substrate)",
-                "Smart contract security analysis",
+                "Vector database architecture (Chroma, Pinecone, FAISS)",
+                "CI/CD pipeline engineering (Azure DevOps, GitHub Actions)",
+                "Docker multi-container testing frameworks",
+                "Distributed systems & blockchain infrastructure",
+                "End-to-End test architecture (API → contract → DB)",
               ].map((skill, i) => (
                 <div key={i} className="flex items-start gap-2">
                   <span className="text-sky-600 mt-0.5 shrink-0">▸</span>
@@ -110,23 +110,40 @@ export default function ResumePage() {
               <div className="relative pl-4 border-l-2 border-[#2a2d3a] hover:border-sky-500/40 transition-colors">
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-1">
                   <span className="text-white font-medium">Gluwa</span>
-                  <span className="text-slate-500 text-xs">Nov 2021 – Feb 2026</span>
+                  <span className="text-slate-500 text-xs">Nov 2021 – Feb 2026 | Remote</span>
                 </div>
-                <div className="text-sky-400 text-xs mb-3">Senior Software Engineer (AI Systems & Blockchain Infrastructure)</div>
+                <div className="text-sky-400 text-xs mb-3">Senior Software Engineer in Test (AI Systems & Blockchain Infrastructure)</div>
                 <div className="text-slate-400 space-y-2.5">
-                  <p>Led development of AI-powered DevOps and blockchain engineering systems used by distributed engineering teams.</p>
-                  <p>Designed Retrieval-Augmented Generation (RAG) architectures where blockchain telemetry, infrastructure logs, smart contract codebases, and engineering documentation were chunked, embedded using semantic embedding models, indexed into Chroma vector databases, and retrieved via similarity search during AI agent reasoning workflows.</p>
-                  <p>Developed Python-based AI services that integrate with CI/CD pipelines to automatically analyze build failures, deployment issues, and operational anomalies across distributed blockchain infrastructure.</p>
+                  <p>Software engineer responsible for testing, reliability engineering, and AI-assisted infrastructure tooling across distributed blockchain systems including Creditcoin (Substrate), EVM smart contract infrastructure, and Solana integrations.</p>
+                  <p>Led development of AI-powered engineering assistants and blockchain observability systems, combining LLM pipelines, semantic retrieval, and infrastructure telemetry to improve debugging and operational workflows for distributed engineering teams.</p>
+                  <p>Designed Retrieval-Augmented Generation (RAG) architectures where blockchain telemetry, infrastructure logs, smart contract repositories, and internal engineering documentation were chunked, embedded with semantic embedding models, indexed into Chroma vector databases, and retrieved through similarity search during AI reasoning workflows.</p>
                   <p>Built LangChain-based AI agents capable of retrieving engineering context, querying vector stores, analyzing logs, and generating explanations for infrastructure incidents.</p>
+                  <p>Developed Python-based AI services integrated with CI/CD pipelines capable of analyzing build failures, deployment issues, and infrastructure anomalies across distributed blockchain environments.</p>
                   <p>Implemented AI-assisted smart contract security workflows where Solidity contracts were parsed, embedded, indexed, and compared against known vulnerability patterns to assist engineers during security audits.</p>
-                  <p>Worked extensively on blockchain infrastructure including:</p>
                   <ul className="space-y-1 ml-1">
                     {[
-                      "Transaction validation systems",
-                      "Blockchain indexers and event pipelines",
-                      "Cross-chain relayers and bridges",
-                      "Smart contract integration testing frameworks",
-                      "Distributed event processing systems",
+                      "Created and maintained CI/CD pipelines on Azure DevOps and GitHub Actions for testing using a multi-Docker container approach",
+                      "Implemented Playwright automation test suite that later integrated MCP for AI-driven front-end automated testing",
+                      "Built backend API automation suites in C# to validate distributed backend services supporting blockchain infrastructure",
+                      "Created Node.js / TypeScript CLI testing frameworks used to validate SDKs, indexers, and developer tooling",
+                      "Built Hardhat-based testing environments to simulate decentralized exchange activity and validate indexer correctness",
+                      "Implemented automated testing pipelines validating blockchain events, database states, and notification systems",
+                      "Created Azure DevOps and GitHub Actions YAML pipelines to validate complex multi-Docker image testing frameworks for production release workflows",
+                      "Created comprehensive End-to-End tests from API and smart contract interaction to Database SQL validation using dependency injection services",
+                      "Designed and executed performance testing strategies for both blockchain nodes and backend API infrastructure",
+                      "Built custom performance testing frameworks for distributed backend systems; implemented load testing using Python and Locust to simulate high-traffic API workloads",
+                      "Performed performance testing of Substrate blockchain pallets and extrinsics to measure execution performance and system throughput",
+                      "Analyzed latency, throughput, and system bottlenecks across blockchain infrastructure and backend services",
+                      "Designed transaction validation frameworks verifying correctness of blockchain state transitions and emitted events across EVM and Substrate environments",
+                      "Built and maintained blockchain indexers and event processing pipelines used by backend systems to interpret on-chain activity",
+                      "Tested cross-chain bridge infrastructure connecting EVM networks, Substrate chains, and Solana environments",
+                      "Developed automated smart contract integration testing frameworks for Solidity contracts and decentralized exchange integrations",
+                      "Deployed and tested Uniswap V3 contracts, building Hardhat-based environments to validate SDK behavior, swaps, liquidity operations, and routing logic",
+                      "Developed and tested custom smart contracts on EVM and Solana to simulate production workflows and validate backend integrations",
+                      "Collaborated closely with backend, blockchain protocol, and DevOps engineers to design testing strategies and validation frameworks ensuring reliability of distributed blockchain infrastructure across development, staging, and production",
+                      "Built developer tooling that allowed engineering teams to reproduce complex blockchain transaction flows locally, improving debugging workflows and reducing issue resolution time",
+                      "Designed automated validation systems ensuring consistency between on-chain events, indexer outputs, backend database states, and notification pipelines across distributed services",
+                      "Contributed to internal engineering documentation and architectural discussions around blockchain infrastructure reliability, AI-assisted diagnostics, and testing strategies for complex multi-service systems",
                     ].map((b, i) => (
                       <li key={i} className="flex items-start gap-2">
                         <span className="text-sky-600 mt-0.5 shrink-0">▸</span>
@@ -134,38 +151,36 @@ export default function ResumePage() {
                       </li>
                     ))}
                   </ul>
-                  <p>Built internal developer tooling using Python and TypeScript enabling engineers to query operational systems using AI-assisted semantic search and diagnostics.</p>
                 </div>
               </div>
 
-              {/* OnlyPump */}
-              <div className="relative pl-4 border-l-2 border-[#2a2d3a] hover:border-sky-500/40 transition-colors">
-                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-1">
-                  <span className="text-white font-medium">OnlyPump</span>
-                  <span className="text-slate-500 text-xs">Jun 2021 – Feb 2026</span>
-                </div>
-                <div className="text-sky-400 text-xs mb-3">AI Systems Engineer</div>
-                <div className="text-slate-400 space-y-2.5">
-                  <p>Built AI analytics and automation systems for blockchain token ecosystems and decentralized trading infrastructure.</p>
-                  <p>Designed RAG pipelines where blockchain events, token metadata, trading activity, operational signals, and social trend data were chunked, embedded into vector representations, indexed within vector stores, and retrieved during AI agent reasoning to generate contextual insights.</p>
-                  <p>Developed Python AI backend services ingesting real-time blockchain events and transforming them into structured data pipelines used by AI analytics systems.</p>
-                  <p>Implemented LangChain-based agent workflows enabling LLM agents to retrieve on-chain data, query vector databases, analyze token performance, and generate operational insights for developers and platform operators.</p>
-                  <p>Designed distributed backend infrastructure integrating Python AI services with TypeScript blockchain microservices processing large volumes of on-chain events.</p>
-                </div>
-              </div>
+              {/* OnlyPump removed — work completed Feb 2026 */}
 
               {/* Hxro Labs */}
               <div className="relative pl-4 border-l-2 border-[#2a2d3a] hover:border-sky-500/40 transition-colors">
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-1">
                   <span className="text-white font-medium">Hxro Labs</span>
-                  <span className="text-slate-500 text-xs">Nov 2020 – Oct 2021</span>
+                  <span className="text-slate-500 text-xs">Nov 2020 – Oct 2021 | Remote</span>
                 </div>
-                <div className="text-sky-400 text-xs mb-3">Software Engineer</div>
+                <div className="text-sky-400 text-xs mb-3">Software Engineer (Trading Infrastructure & Automation)</div>
                 <div className="text-slate-400 space-y-2.5">
-                  <p>Developed backend infrastructure for a real-time financial trading platform.</p>
-                  <p>Built REST APIs and validation services processing real-time market data streams.</p>
-                  <p>Implemented transaction validation logic and backend systems supporting financial trading workflows.</p>
-                  <p>Integrated backend validation services into CI/CD pipelines to ensure reliability of production releases.</p>
+                  <p>Engineering contributor to Hxro, one of the first binary options trading platforms built on the Solana blockchain, supporting real-time trading workflows and high-frequency market data.</p>
+                  <p>Designed and implemented comprehensive testing infrastructure from scratch to ensure reliability of backend APIs, trading systems, and frontend user interfaces in a latency-sensitive financial environment.</p>
+                  <ul className="space-y-1 ml-1">
+                    {[
+                      "Developed a Python-based automation framework used to validate trading APIs, transaction flows, and backend services handling real-time market data and trading events",
+                      "Built automated validation systems verifying: order submission and execution flows, market data integrity, transaction validation logic, and backend state consistency during trading operations",
+                      "Implemented frontend automation using Playwright, creating end-to-end test suites validating real user trading workflows including order placement, market interactions, and UI behavior during live trading conditions",
+                      "Later extended the automation system to support AI-assisted test orchestration, integrating MCP-based workflows allowing intelligent generation and execution of frontend tests",
+                      "Integrated testing infrastructure with CI/CD pipelines, enabling automated validation of releases before deployment to production trading environments",
+                      "Worked closely with backend and protocol engineers to ensure system stability across real-time trading infrastructure built on Solana",
+                    ].map((b, i) => (
+                      <li key={i} className="flex items-start gap-2">
+                        <span className="text-sky-600 mt-0.5 shrink-0">▸</span>
+                        <span>{b}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
 
@@ -191,8 +206,19 @@ export default function ResumePage() {
                 </div>
                 <div className="text-sky-400 text-xs mb-3">QA Engineer (Contract)</div>
                 <div className="text-slate-400 space-y-2.5">
-                  <p>Worked with cross-functional engineering teams supporting iOS and Android products.</p>
-                  <p>Executed regression testing, system validation, and release readiness workflows for mobile applications.</p>
+                  <p>Worked with cross-functional engineering teams supporting Apple web and mobile product ecosystems.</p>
+                  <ul className="space-y-1 ml-1">
+                    {[
+                      "Developed Python and Selenium WebDriver automation scripts for apple.com critical workflows",
+                      "Performed API testing and backend validation verifying data integrity and service responses",
+                      "Executed regression testing and system validation for iOS and Android product-related web services",
+                    ].map((b, i) => (
+                      <li key={i} className="flex items-start gap-2">
+                        <span className="text-sky-600 mt-0.5 shrink-0">▸</span>
+                        <span>{b}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
 
@@ -241,12 +267,14 @@ export default function ResumePage() {
           <div>
             <h4 className="text-xs font-semibold text-sky-400 uppercase tracking-widest mb-4">Technical Stack</h4>
             <div className="space-y-2.5 text-slate-400">
-              <div><span className="text-slate-200 font-medium">Programming Languages:</span> Python, TypeScript, JavaScript, Solidity, C#, Java, SQL</div>
-              <div><span className="text-slate-200 font-medium">AI Systems & Frameworks:</span> RAG architectures, agentic AI systems, semantic search, embedding pipelines, prompt engineering, LLM evaluation, LangChain, LangGraph, AI workflow automation, AI observability</div>
+              <div><span className="text-slate-200 font-medium">Programming Languages:</span> Python, TypeScript, JavaScript, Solidity, Rust, C#, Java, SQL</div>
+              <div><span className="text-slate-200 font-medium">Testing &amp; Automation:</span> Playwright (+ MCP AI-driven), Python automation frameworks, C# RestSharp, Hardhat / Foundry / Truffle, API automation, E2E testing, Selenium WebDriver</div>
+              <div><span className="text-slate-200 font-medium">Performance Testing:</span> Locust, K6, Substrate pallet benchmarking</div>
+              <div><span className="text-slate-200 font-medium">AI Systems &amp; Frameworks:</span> RAG architectures, agentic AI, LangChain, LangGraph, embedding pipelines, prompt engineering, LLM evaluation, AI workflow automation</div>
               <div><span className="text-slate-200 font-medium">Vector Databases:</span> Chroma, Pinecone, Weaviate, Qdrant, Milvus, FAISS</div>
               <div><span className="text-slate-200 font-medium">LLM Platforms:</span> OpenAI API, Anthropic API, Ollama, local/open-source LLM integration</div>
-              <div><span className="text-slate-200 font-medium">Backend & Infrastructure:</span> FastAPI, Node.js, Docker, Kubernetes, Redis, Linux, GitHub Actions, Jenkins, Azure DevOps</div>
-              <div><span className="text-slate-200 font-medium">Blockchain:</span> Ethereum (EVM), Solana, Substrate, Hardhat, Anchor</div>
+              <div><span className="text-slate-200 font-medium">Backend &amp; Infrastructure:</span> FastAPI, Node.js, Docker, Kubernetes, Redis, Linux, GitHub Actions, Jenkins, Azure DevOps</div>
+              <div><span className="text-slate-200 font-medium">Blockchain:</span> Ethereum (EVM), Solana, Substrate, Hardhat, Anchor, Foundry</div>
               <div><span className="text-slate-200 font-medium">Databases:</span> PostgreSQL, MySQL</div>
             </div>
           </div>
@@ -285,8 +313,9 @@ export default function ResumePage() {
           {/* Education */}
           <div>
             <h4 className="text-xs font-semibold text-sky-400 uppercase tracking-widest mb-3">Education</h4>
-            <div className="text-white font-medium">B.S. Computer Science</div>
-            <div className="text-slate-400 text-xs">The University of Texas at Austin</div>
+            <p className="text-slate-400 leading-relaxed">
+              Self-taught and bootcamp-trained engineer who chose a hands-on path into technology, investing years in building projects and mastering software engineering through continuous independent learning.
+            </p>
           </div>
         </div>
       </div>

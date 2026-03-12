@@ -21,10 +21,10 @@ interface Message {
 }
 
 const QUICK_QUESTIONS = [
-  "What does Anvar do at OnlyPump?",
-  "Describe the AI analytics platform you built",
-  "What's your experience with RAG and LangChain?",
-  "Tell me about your Gluwa work",
+  "What kind of testing did Anvar do at Gluwa?",
+  "Tell me about your AI-assisted testing and RAG work",
+  "What's your experience with blockchain QA?",
+  "Describe your performance testing expertise",
   "What's your strongest tech stack?",
 ];
 

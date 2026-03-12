@@ -75,19 +75,22 @@ export default function HomePage() {
               </span>
               <br />
               <span className="text-3xl md:text-4xl text-slate-400 font-medium">
-                Senior AI Systems Engineer
+                Senior Software Engineer in Test · AI Systems Engineer
               </span>
             </h1>
 
             <p className="text-lg text-slate-400 max-w-2xl mb-10 leading-relaxed">
-              10+ years building production AI systems, distributed backend infrastructure,
-              and blockchain platforms — RAG architectures, agentic AI workflows, LLM orchestration,
-              vector databases, smart contract security analysis, and cross-chain systems on{" "}
+              10+ years in engineering — started in QA automation and test infrastructure,
+              evolved into distributed backend systems, blockchain infrastructure, and now
+              AI-enabled testing and AI systems engineering. Deep expertise in{" "}
+              <span className="text-sky-400">Python & TypeScript automation</span>,{" "}
+              <span className="text-sky-400">RAG pipelines</span>,{" "}
+              <span className="text-sky-400">LLM-assisted testing</span>, smart contract validation,
+              and performance testing across{" "}
               <span className="text-sky-400">Ethereum</span>,{" "}
               <span className="text-sky-400">Solana</span>, and{" "}
               <span className="text-sky-400">Substrate</span>.
               Previously at{" "}
-              <span className="text-sky-400">OnlyPump</span>,{" "}
               <span className="text-sky-400">Gluwa</span>,{" "}
               <span className="text-sky-400">Hxro Labs</span>, and{" "}
               <span className="text-sky-400">Apple</span>.
@@ -140,9 +143,9 @@ export default function HomePage() {
       <section className="mb-24">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
-            { value: "1M+", label: "Lines of Code" },
-            { value: "10+", label: "Years in Engineering" },
-            { value: "4+", label: "AI/LLM Systems Built" },
+            { value: "10+", label: "Years in QA & Engineering" },
+            { value: "5+", label: "Years in Blockchain" },
+            { value: "4+", label: "Years in AI/LLM Systems" },
             { value: "8", label: "Companies" },
           ].map((stat) => (
             <div key={stat.label} className="card text-center">
@@ -197,20 +200,20 @@ export default function HomePage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {[
             {
-              area: "AI Engineering",
-              items: ["RAG Pipelines", "LLM Orchestration", "Vector Databases (pgvector)", "LangChain", "OpenAI API", "Anthropic API", "Embeddings", "Prompt Engineering", "Ollama / Meta Llama", "AI Agents", "Hugging Face"],
+              area: "Test Automation & SDET",
+              items: ["Python Automation Frameworks", "Playwright / MCP-driven Tests", "API Automation (C# RestSharp)", "TypeScript CLI Test Frameworks", "Hardhat-based Smart Contract Testing", "End-to-End Test Architecture", "Performance Testing (Locust, K6)", "Blockchain Event Validation"],
             },
             {
-              area: "Blockchain Engineering",
-              items: ["Solidity / Hardhat / Foundry", "EVM (ethers.js / viem)", "Solana / Pump.fun / Jito", "Substrate / Polkadot.js", "Smart Contracts", "Cross-Chain Bridges", "DeFi Infrastructure"],
+              area: "AI Systems & Testing",
+              items: ["RAG Pipelines", "LLM Orchestration", "LangChain / LangGraph", "Vector Databases (Chroma, Pinecone)", "AI-Assisted CI/CD Diagnostics", "Prompt Engineering", "AI Agents", "Agentic Test Workflows"],
             },
             {
-              area: "Backend & Systems",
-              items: ["Python (FastAPI)", "TypeScript (NestJS)", "PostgreSQL", "Redis", "Docker", "Kubernetes", "C# / .NET", "WebSocket", "REST APIs", "Distributed Systems"],
+              area: "Blockchain QA & Infrastructure",
+              items: ["EVM Smart Contract Testing", "Substrate Pallet Testing", "Cross-Chain Bridge Validation", "Indexer & Event Pipeline Testing", "Uniswap V3 Integration Testing", "Solana Infrastructure", "Hardhat / Foundry / Anchor"],
             },
             {
-              area: "Reliability & Automation",
-              items: ["CI/CD Architecture", "Infrastructure Tooling", "System Validation", "Azure Pipelines", "GitHub Actions", "Developer Workflow Automation"],
+              area: "CI/CD & Infrastructure",
+              items: ["Azure DevOps Pipelines", "GitHub Actions", "Docker Multi-Container", "Kubernetes", "GitLab CI/CD", "Performance Benchmarking", "Distributed Systems Testing", "Developer Tooling"],
             },
           ].map((group) => (
             <div key={group.area} className="card">

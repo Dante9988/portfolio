@@ -5,7 +5,7 @@ tags: ["Blockchain", "Substrate", "NestJS", "Polkadot.js", "WebSocket", "React",
 stack: ["NestJS", "TypeScript", "Prisma", "PostgreSQL", "Polkadot.js API", "Socket.io", "React", "Tailwind CSS", "Docker", "Railway", "Vercel"]
 summary: "Full-stack blockchain explorer for a Substrate network — built from scratch, not a fork. NestJS + Prisma backend with real-time WebSocket block streaming, PostgreSQL persistence, TTL caching, Swagger API docs, and a React frontend deployed on Vercel."
 github: "https://github.com/Dante9988/Substrate-explorer"
-demo: ""
+demo: "https://substrate-explorer-frontend.vercel.app/"
 role: "Full-Stack Engineer"
 period: "Gluwa / 2022–2023"
 ---
@@ -15,6 +15,8 @@ period: "Gluwa / 2022–2023"
 ## Overview
 
 A full-stack blockchain explorer built from scratch for a Substrate-based network in the Polkadot ecosystem. Not a fork of an existing explorer — a purpose-built system with a NestJS + Prisma backend, real-time block streaming, a PostgreSQL persistence layer, a caching system with TTL eviction, and a React frontend.
+
+**Live demo:** [https://substrate-explorer-frontend.vercel.app/](https://substrate-explorer-frontend.vercel.app/)
 
 ## What I Built
 

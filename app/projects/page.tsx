@@ -23,11 +23,18 @@ const PROJECT_ORDER: string[] = [
   "openaudit-ai",
   "truchain-ai-content-checker",
   "portfolio-ai",
+  "jarvis-ai-assistant",
+  "ai-interview-coach",
   "ccnext-bridge-worker",
   "airdrop-claim",
   "dex-tools",
+  "pump-fun-evm",
+  "blockchain-prop-firm",
+  "solana-trading-bots",
+  "solidity-dapps",
   "polymarket-bot",
   "substrate-explorer",
+  "vanity-generator",
 ];
 
 function getProjects(): ProjectMeta[] {
